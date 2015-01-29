@@ -13,7 +13,8 @@ def h2u(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
     :return: unix time (int value)
     """
     try:
-        result = time.mktime(datetime.datetime.strptime(value, view).timetuple())
+        result = time.mktime(datetime.datetime.strptime(value, view)
+                             .timetuple())
         result = int(result) if unix_int else result
     except ValueError as e:
         raise ValueError("Exception from dateconv: %s" % str(e))
@@ -98,4 +99,3 @@ def u2h(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
         raise ValueError("Exception from dateconv: %s" % str(e))
     else:
         return result
-
