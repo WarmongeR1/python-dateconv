@@ -10,10 +10,10 @@ python-dateconv
     :target: https://coveralls.io/r/WarmongeR1/python-dateconv
 
 .. image:: https://pypip.in/v/python-dateconv/badge.png
-    :target: https://pypi.python.org/pypi/schedule
+    :target: https://pypi.python.org/pypi/python-dateconv
 
 .. image:: https://pypip.in/d/python-dateconv/badge.png
-    :target: https://pypi.python.org/pypi/schedule
+    :target: https://pypi.python.org/pypi/python-dateconv
 
 Description
 --------------
