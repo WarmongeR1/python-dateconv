@@ -50,7 +50,6 @@ def u2d(value, unix_int=True):
         result = datetime.datetime.fromtimestamp(value)
     except (ValueError, AttributeError) as e:
         raise Exception("Exception from dateconv: %s" % str(e))
-    
     else:
         return result
 
