@@ -19,6 +19,15 @@ class TestAll(unittest.TestCase):
         self.assertEqual(u2d(my_unix_time), datetime_time)
         self.assertEqual(u2h(my_unix_time), human_time)
 
+    def test_exeptions(self):
+        self.assertRaises(Exception, d2h, (123, ))
+        self.assertRaises(Exception, d2h, ('fds', ))
+
+        try:
+            d2h(datetime.datetime.now())
+        except Exception:
+            self.fail("raised Exception unexpectedly!")
+
 
 if __name__ == '__main__':
     unittest.main()
