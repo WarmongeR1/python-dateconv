@@ -10,7 +10,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
     sys.exit()
 
-PACKAGE_VERSION = '0.0.3'
+PACKAGE_VERSION = '0.0.4'
 PACKAGE_DOWNLOAD_URL = (
 
 )
@@ -29,6 +29,7 @@ setup(
     version=PACKAGE_VERSION,
     license=read_file('LICENSE.txt'),
     packages=find_packages(),
+    long_description=read_file('README.rst'),
     author='Sapronov Alexander',
     url='https://github.com/WarmongeR1/python-dateconv',
     author_email='sapronov.alexander92@gmail.com',
