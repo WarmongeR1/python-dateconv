@@ -39,7 +39,6 @@ setup(
     ],
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU v3 License',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Natural Language :: English',
