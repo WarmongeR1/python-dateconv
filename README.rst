@@ -1,5 +1,6 @@
 python-dateconv
---------
+------------------
+
 
 
 .. image:: https://api.travis-ci.org/WarmongeR1/python-dateconv.png
@@ -14,7 +15,8 @@ python-dateconv
 .. image:: https://pypip.in/d/python-dateconv/badge.png
     :target: https://pypi.python.org/pypi/schedule
 
-
+Description
+--------------
 
 Simple package for convert time between types
 
