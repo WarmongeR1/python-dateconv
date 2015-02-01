@@ -14,6 +14,10 @@ python-dateconv
 
 .. image:: https://pypip.in/d/python-dateconv/badge.png
     :target: https://pypi.python.org/pypi/python-dateconv
+    
+.. image:: https://readthedocs.org/projects/python-dateconv/badge/?version=latest
+    :target: https://readthedocs.org/projects/python-dateconv/?badge=latest
+    :alt: Documentation Status
 
 Description
 --------------
