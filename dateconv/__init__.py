@@ -99,3 +99,20 @@ def u2h(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
         raise Exception("Exception from dateconv: %s" % str(e))
     else:
         return result
+
+
+def l2g(value):
+    """
+    Convert local time to gmt
+    :param value: datetime object
+    :return: return unix time
+    """
+    if isinstance(value, str):
+        unix_value = h2u(value)
+    elif isinstance(value, datetime.datetime):
+        unix_value = d2u(value)
+    elif isinstance(value, int):
+        unix_value = value
+    else:
+        raise Exception("Exception from dateconv: not define type of value")
+    return int(time.mktime(time.gmtime(unix_value)))
