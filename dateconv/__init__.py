@@ -4,6 +4,10 @@ import datetime
 import time
 
 
+class DateConvException(Exception):
+    pass
+
+
 def h2u(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
     """
     Convert str in format (view) to unix time
@@ -17,7 +21,7 @@ def h2u(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
                              .timetuple())
         result = int(result) if unix_int else result
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -33,7 +37,7 @@ def d2u(value, unix_int=True):
         result = time.mktime(value.timetuple())
         result = int(result) if unix_int else result
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -49,7 +53,7 @@ def u2d(value, unix_int=True):
         value = int(value) if unix_int else value
         result = datetime.datetime.fromtimestamp(value)
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -65,7 +69,7 @@ def h2d(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
     try:
         result = u2d(h2u(value, view, unix_int))
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -79,7 +83,7 @@ def d2h(value, view='%Y-%m-%d %H:%M:%S'):
     try:
         result = value.strftime(view)
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -96,7 +100,7 @@ def u2h(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
         value = int(value) if unix_int else value
         result = d2h(datetime.datetime.fromtimestamp(value), view)
     except (ValueError, AttributeError) as e:
-        raise Exception("Exception from dateconv: %s" % str(e))
+        raise DateConvException("Exception from dateconv: %s" % str(e))
     else:
         return result
 
@@ -114,5 +118,6 @@ def l2g(value):
     elif isinstance(value, int):
         unix_value = value
     else:
-        raise Exception("Exception from dateconv: not define type of value")
+        raise DateConvException(
+            "Exception from dateconv: not define type of value")
     return int(time.mktime(time.gmtime(unix_value)))

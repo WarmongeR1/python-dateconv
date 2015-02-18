@@ -11,6 +11,7 @@ class TestAll(unittest.TestCase):
         human_time = '2015-01-01 18:21:26'
         datetime_time = datetime.datetime(2015, 1, 1, 18, 21, 26)
         my_unix_time = 1420136486  # GMT
+        # my_unix_time = 1420114886  # local
 
         self.assertEqual(d2u(datetime_time), my_unix_time)
         self.assertEqual(d2h(datetime_time), human_time)
@@ -20,12 +21,12 @@ class TestAll(unittest.TestCase):
         self.assertEqual(u2h(my_unix_time), human_time)
 
     def test_exeptions(self):
-        self.assertRaises(Exception, d2h, (123, ))
-        self.assertRaises(Exception, d2h, ('fds', ))
+        self.assertRaises(DateConvException, d2h, (123, ))
+        self.assertRaises(DateConvException, d2h, ('fds', ))
 
         try:
             d2h(datetime.datetime.now())
-        except Exception:
+        except DateConvException:
             self.fail("raised Exception unexpectedly!")
 
 

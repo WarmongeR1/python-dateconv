@@ -1,4 +1,4 @@
 # docs
 
-Sphinx
-sphinx_bootstrap_theme
+#Sphinx
+#sphinx_bootstrap_theme
