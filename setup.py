@@ -10,7 +10,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
     sys.exit()
 
-PACKAGE_VERSION = '0.0.7'
+PACKAGE_VERSION = '0.0.8'
 PACKAGE_DOWNLOAD_URL = (
 
 )
