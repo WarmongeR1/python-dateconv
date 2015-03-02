@@ -7,6 +7,7 @@ from dateconv import *
 
 
 class TestAll(unittest.TestCase):
+
     def test_times(self):
         human_time = '2015-01-01 18:21:26'
         datetime_time = datetime.datetime(2015, 1, 1, 18, 21, 26)
@@ -27,7 +28,7 @@ class TestAll(unittest.TestCase):
         try:
             d2h(datetime.datetime.now())
         except DateConvException:
-            self.fail("raised Exception unexpectedly!")
+            self.fail('raised Exception unexpectedly!')
 
 
 if __name__ == '__main__':

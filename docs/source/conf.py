@@ -13,8 +13,9 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
+
 import sphinx_bootstrap_theme
 
 DEV_DIR = os.path.join(os.getcwd(), './../../')
@@ -121,13 +122,13 @@ html_theme = 'bootstrap'
 
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "python-dateconv",
+    'navbar_title': 'python-dateconv',
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Site",
+    'navbar_site_name': 'Site',
 
     # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Page",
+    'navbar_pagenav_name': 'Page',
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -152,19 +153,19 @@ html_theme_options = {
     # will break.
     #
     # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+    'globaltoc_includehidden': 'true',
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar",
+    'navbar_class': 'navbar',
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+    'navbar_fixed_top': 'true',
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "nav",
+    'source_link_position': 'nav',
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -188,12 +189,12 @@ html_theme_options = {
     # * superhero
     # * united
     # * yeti (v3 only)
-    'bootswatch_theme': "flatly",
+    'bootswatch_theme': 'flatly',
     #'bootswatch_theme': "united",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
-    'bootstrap_version': "3",
+    'bootstrap_version': '3',
 }
 
 
@@ -276,22 +277,22 @@ htmlhelp_basename = 'python-dateconvdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'python-dateconv.tex', 'python-dateconv Documentation',
-   'Sapronov Alexander', 'manual'),
+    ('index', 'python-dateconv.tex', 'python-dateconv Documentation',
+     'Sapronov Alexander', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -334,9 +335,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'python-dateconv', 'python-dateconv Documentation',
-   'Sapronov Alexander', 'python-dateconv', 'One line description of project.',
-   'Miscellaneous'),
+    ('index', 'python-dateconv', 'python-dateconv Documentation',
+     'Sapronov Alexander', 'python-dateconv', 'One line description of project.',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.

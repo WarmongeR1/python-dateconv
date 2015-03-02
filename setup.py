@@ -2,9 +2,10 @@
 
 import codecs
 import os
-from setuptools import find_packages
 import sys
 from distutils.core import setup
+
+from setuptools import find_packages
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
@@ -17,9 +18,7 @@ PACKAGE_DOWNLOAD_URL = (
 
 
 def read_file(filename):
-    """
-    Read a utf8 encoded text file and return its contents.
-    """
+    """Read a utf8 encoded text file and return its contents."""
     with codecs.open(filename, 'r', 'utf8') as f:
         return f.read()
 
@@ -45,4 +44,3 @@ setup(
         'Natural Language :: English',
     ],
 )
-
