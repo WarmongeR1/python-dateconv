@@ -105,14 +105,14 @@ def u2h(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
         return result
 
 
-def l2g(value):
+def l2g(value, view='%Y-%m-%d %H:%M:%S'):
     """
     Convert local time to gmt
     :param value: datetime object
     :return: return unix time
     """
     if isinstance(value, str):
-        unix_value = h2u(value)
+        unix_value = h2u(value, view)
     elif isinstance(value, datetime.datetime):
         unix_value = d2u(value)
     elif isinstance(value, int):
