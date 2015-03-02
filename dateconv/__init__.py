@@ -131,7 +131,7 @@ def l2g(value, view='%Y-%m-%d %H:%M:%S'):
     return int(time.mktime(time.gmtime(unix_value)))
 
 
-def g2l(value, view):
+def g2l(value, view='%Y-%m-%d %H:%M:%S'):
     """Convert gtm time to local time.
 
     :param value: time value (str, datetime, unix time)
