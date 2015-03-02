@@ -108,7 +108,8 @@ def u2h(value, view='%Y-%m-%d %H:%M:%S', unix_int=True):
 def l2g(value, view='%Y-%m-%d %H:%M:%S'):
     """
     Convert local time to gmt
-    :param value: datetime object
+    :param value: time value (str, datetime, unix time)
+    :param view: format to string
     :return: return unix time
     """
     if isinstance(value, str):
@@ -121,3 +122,24 @@ def l2g(value, view='%Y-%m-%d %H:%M:%S'):
         raise DateConvException(
             "Exception from dateconv: not define type of value")
     return int(time.mktime(time.gmtime(unix_value)))
+
+
+def g2l(value, view):
+    """
+    Convert gtm time to local time
+    :param value: time value (str, datetime, unix time)
+    :param view: format to string
+    :return:
+    """
+    if isinstance(value, str):
+        unix_value = h2u(value, view)
+    elif isinstance(value, datetime.datetime):
+        unix_value = d2u(value)
+    elif isinstance(value, int):
+        unix_value = value
+    else:
+        raise DateConvException(
+            "Exception from dateconv: not define type of value")
+    offset = datetime.datetime.fromtimestamp(
+        unix_value) - datetime.datetime.utcfromtimestamp(unix_value)
+    return value + offset
