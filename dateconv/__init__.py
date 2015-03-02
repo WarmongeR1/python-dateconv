@@ -150,4 +150,4 @@ def g2l(value, view='%Y-%m-%d %H:%M:%S'):
             'Exception from dateconv: not define type of value')
     offset = datetime.datetime.fromtimestamp(
         unix_value) - datetime.datetime.utcfromtimestamp(unix_value)
-    return value + offset
+    return unix_value + offset
