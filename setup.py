@@ -7,11 +7,12 @@ from distutils.core import setup
 
 from setuptools import find_packages
 
+
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload -r pypi')
     sys.exit()
 
-PACKAGE_VERSION = '0.0.8'
+PACKAGE_VERSION = '0.0.9'
 PACKAGE_DOWNLOAD_URL = (
 
 )
@@ -39,7 +40,9 @@ setup(
     ],
     classifiers=[
         'Intended Audience :: Developers',
+        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2.3',
         'Programming Language :: Python :: 3.4',
         'Natural Language :: English',
     ],

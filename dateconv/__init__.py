@@ -127,7 +127,8 @@ def l2g(value, view='%Y-%m-%d %H:%M:%S'):
         unix_value = value
     else:
         raise DateConvException(
-            'Exception from dateconv: not define type of value')
+            'Exception from dateconv: not define type of value: %s' % type(
+                value))
     return int(time.mktime(time.gmtime(unix_value)))
 
 
@@ -147,8 +148,9 @@ def g2l(value, view='%Y-%m-%d %H:%M:%S'):
         unix_value = value
     else:
         raise DateConvException(
-            'Exception from dateconv: not define type of value')
+            'Exception from dateconv: not define type of value: %s' % type(
+                value))
     offset = (datetime.datetime.fromtimestamp(
         unix_value) - datetime.datetime.utcfromtimestamp(
         unix_value)).total_seconds()
-    return unix_value + offset
+    return int(unix_value + offset)

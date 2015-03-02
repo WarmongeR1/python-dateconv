@@ -12,7 +12,7 @@ class TestAll(unittest.TestCase):
         human_time = '2015-01-01 18:21:26'
         datetime_time = datetime.datetime(2015, 1, 1, 18, 21, 26)
         my_unix_time = 1420136486  # GMT
-        # my_unix_time = 1420114886  # local
+        # my_unix_time = 1420114886  # local GMT +6
 
         self.assertEqual(d2u(datetime_time), my_unix_time)
         self.assertEqual(d2h(datetime_time), human_time)
