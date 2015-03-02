@@ -148,6 +148,7 @@ def g2l(value, view='%Y-%m-%d %H:%M:%S'):
     else:
         raise DateConvException(
             'Exception from dateconv: not define type of value')
-    offset = datetime.datetime.fromtimestamp(
-        unix_value) - datetime.datetime.utcfromtimestamp(unix_value)
+    offset = (datetime.datetime.fromtimestamp(
+        unix_value) - datetime.datetime.utcfromtimestamp(
+        unix_value)).total_seconds()
     return unix_value + offset
