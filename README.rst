@@ -9,10 +9,10 @@ python-dateconv
 .. image:: https://coveralls.io/repos/WarmongeR1/python-dateconv/badge.png
     :target: https://coveralls.io/r/WarmongeR1/python-dateconv
 
-.. image:: https://pypip.in/v/python-dateconv/badge.png
+.. image:: https://img.shields.io/pypi/v/python-dateconv.svg
     :target: https://pypi.python.org/pypi/python-dateconv
 
-.. image:: https://pypip.in/d/python-dateconv/badge.png
+.. image:: https://img.shields.io/pypi/dm/python-dateconv.svg
     :target: https://pypi.python.org/pypi/python-dateconv
     
 .. image:: https://readthedocs.org/projects/python-dateconv/badge/?version=latest
